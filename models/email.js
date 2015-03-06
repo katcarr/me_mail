@@ -2,5 +2,6 @@ MeMail.Email = DS.Model.extend({
   author: DS.attr(),
   receiver: DS.attr(),
   title: DS.attr(),
-  folder : DS.belongsTo('email', {async: true})
+  message: DS.attr(),
+  folder : DS.belongsTo('folder', {async: true})
 });

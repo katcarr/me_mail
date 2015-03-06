@@ -1,6 +1,6 @@
 <form>
   <div class="form-group">
-    {{input value= sender placeholder="Send To" class="form-control"}}
+    {{input value=receiver placeholder="Send To" class="form-control"}}
   </div>
   <div class="form-group">
     {{input value= title placeholder="Title" class="form-control"}}
@@ -9,5 +9,5 @@
     {{textarea value= message placeholder="Message" class="form-control"}}
   </div>
 
-  <button class='btn btn-danger'>Send Email</button>
+  <button class='btn btn-danger' {{action 'newEmail'}}>Send Email</button>
 </form>

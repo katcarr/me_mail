@@ -1,7 +1,14 @@
+{{name}} Folder
 
-{{#each email in model.emails}}
+
+<p>{{#link-to "new-email" this class="btn-default"}}Add Email{{/link-to}}</p>
+
+{{outlet "new-email"}}
+
+{{#each email in emails}}
 
 <p>{{email.author}}</p>
+<p>{{email.title}}</p>
 
 
 {{/each}}
