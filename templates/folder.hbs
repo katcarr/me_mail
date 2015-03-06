@@ -10,10 +10,13 @@
   </div>
 
   <div class="col-sm-6">
+  <h4>Emails</h4>
+
     {{#each email in emails}}
 
-    <p>{{email.author}}</p>
-    <p>{{email.title}}</p>
+    {{#link-to "email" email}}
+    <p>From :{{email.receiver}} Subject:{{email.title}}</p>
+    {{/link-to}}
 
 
     {{/each}}
