@@ -1,1 +1,9 @@
-{{action "addFolders"}}
+<h1>Welcome to MeMails</h1>
+
+<ul>
+
+{{#each email in model }}
+  <li>{{email.name}}</li>
+
+{{/each}}
+</ul>
