@@ -1,1 +1,1 @@
-meMail = Ember.Application.create();
+MeMail = Ember.Application.create();
