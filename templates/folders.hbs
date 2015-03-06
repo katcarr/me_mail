@@ -1,9 +1,9 @@
 <h1>Welcome to MeMails</h1>
 
-{{#link-to 'new-folder'}}Add a New folder{{/link-to}}
 
 {{outlet}}
 
+Folders
 <ul>
 
 {{#each folder in model itemController = 'folder'}}
@@ -12,3 +12,4 @@
 {{/each}}
 
 </ul>
+{{#link-to 'new-folder'}}Add a New folder{{/link-to}}
