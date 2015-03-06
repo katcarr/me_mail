@@ -1,0 +1,1 @@
+meMail = Ember.Application.create();
