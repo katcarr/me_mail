@@ -1,9 +1,11 @@
 <h1>Welcome to MeMails</h1>
 
+<p>{{#link-to "new-email" class="btn-default"}}Add Email{{/link-to}}</p>
+
 <ul>
 
-{{#each email in model }}
-  <li>{{email.name}}</li>
+{{#each folder in model }}
+  {{#link-to "folder" folder}}<li>{{folder.name}}</li>{{/link-to}}
 
 {{/each}}
 </ul>
