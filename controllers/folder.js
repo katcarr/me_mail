@@ -2,6 +2,7 @@ MeMail.FolderController = Ember.ObjectController.extend({
   actions: {
     delete: function() {
       this.get('model').destroyRecord();
+      this.transitionToRoute('folders');
     },
 
   deleteEmail: function(email){

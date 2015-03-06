@@ -6,7 +6,7 @@ MeMail.NewFolderController = Ember.Controller.extend({
       });
       newFolder.save();
       this.set('name', null);
-      this.transitionToRoute('folders');
+    
     }
   }
 });

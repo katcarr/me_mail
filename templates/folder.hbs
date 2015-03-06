@@ -1,17 +1,26 @@
 {{name}} Folder
 
+<div class="row">
 
-<p>{{#link-to "new-email" this class="btn-default"}}Add Email{{/link-to}}</p>
+  <div class="col-sm-6">
 
-{{outlet "new-email"}}
+    <p>{{#link-to "new-email" this class="btn-default"}}New Email{{/link-to}}</p>
 
-{{#each email in emails}}
+    {{outlet "new-email"}}
+  </div>
 
-<p>{{email.author}}</p>
-<p>{{email.title}}</p>
+  <div class="col-sm-6">
+    {{#each email in emails}}
+
+    <p>{{email.author}}</p>
+    <p>{{email.title}}</p>
 
 
-{{/each}}
+    {{/each}}
 
+  </div>
 
-<button class="btn btn-default" {{action 'delete' }}>Remove</button>
+</div>
+<br>
+
+<button class="btn btn-default" {{action 'delete' }}>Delete Folder and All Emails</button>

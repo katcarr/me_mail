@@ -7,7 +7,6 @@ MeMail.NewEmailController = Ember.ObjectController.extend({
         var controller = this;
         email.get('folder').then(function(folder) {
           folder.save();
-          controller.transitionToRoute('folders');
         });
     }
   }
