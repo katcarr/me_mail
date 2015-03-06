@@ -6,13 +6,12 @@ MeMail.FolderController = Ember.ObjectController.extend({
     },
 
     deleteEmail: function(email){
-      var lot = this.get('model');
-      lot.get("emails").removeObject(email);
-      lot.save();
+      var folder = this.get('model');
+      folder.get("emails").removeObject(email);
+      folder.save();
       email.destroyRecord();
+      this.transitionToRoute('folders', folder);
     }
-  },
-  inbox: function() {
-    return this.get('name') === 'inbox';
   }
+
 });

@@ -16,6 +16,7 @@
 
     {{#link-to "email" email}}
     <p>From :{{email.receiver}} Subject:{{email.title}}</p>
+    <button class="btn btn-warning" {{action 'deleteEmail' email }}>Delete Email</button>
     {{/link-to}}
 
 
@@ -25,5 +26,8 @@
 
 </div>
 <br>
+
+{{outlet "email"}}
+
 
 <button class="btn btn-default" {{action 'delete' }}>Delete Folder and All Emails</button>
